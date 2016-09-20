@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% capture dest %}https://blog.kylemanna.com{{ page.url | remove: ".html" }}{% endcapture %}
+
+<link rel="canonical" href="{{ dest }}"/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="refresh" content="0;url={{ page.redirect_to }}" />
+</head>
+<body>
+    <h1>Redirecting...</h1>
+      <a href="{{ dest }}">Click here if you are not redirected.<a>
+      <script>location='{{ dest }}'</script>
+</body>
+</html>
